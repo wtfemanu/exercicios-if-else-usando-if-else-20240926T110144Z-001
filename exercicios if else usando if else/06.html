@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: NÚMERO DE CENTENAS, DEZENAS E UNIDADES
+    Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+    Observando os termos no plural a colocação do "e", da vírgula entre outros.
+    
+    Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades
+    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+    */
+    const numero = Number(prompt("informe um numero"));
+
+    const partecen = (numero/100);
+    const partecenum = Math.floor(partecen);
+    const partecendois = partecenum *100;
+
+    const partedez = numero - partecendois;
+    const partedezum = partedez / 10;
+    const partedezdois = Math.floor(partedezum);
+
+    const parteuni =  partedezum - partedezdois;
+    const parteunium = parteuni *10;
+    const parteunidois = Math.round(parteunium);
+
+    if (partecenum >1  && partedezdois<=1 && parteunidois <=1 ) {
+        alert(`${numero} = ${partecenum} centenas, ${partedezdois} dezena e ${parteunidois} unidade`)}
+
+    else if (partecenum >1  && partedezdois>1 && parteunidois <=1 ) {
+        alert(`${numero} = ${partecenum} centenas, ${partedezdois} dezenas e ${parteunidois} unidade`)}
+
+    else if (partecenum >1  && partedezdois >1 && parteunidois >1 ) {
+        alert(`${numero} = ${partecenum} centenas, ${partedezdois} dezenas e ${parteunidois} unidades`)}
+
+    else if (partecenum <=1  && partedezdois<=1 && parteunidois <=1 ) {
+           alert(`${numero} = ${partecenum} centenas, ${partedezdois} dezena e ${parteunidois} unidade`)}    
+
+    else if (partecenum <=1  && partedezdois >1 && parteunidois >1 ) {
+            alert(`${numero} = ${partecenum} centena, ${partedezdois} dezenas e ${parteunidois} unidades`)}
+        
+    else if (partecenum >1  && partedezdois<=1 && parteunidois >1 ) {
+        alert(`${numero} = ${partecenum} centenas, ${partedezdois} dezena e ${parteunidois} unidades`)}   
+
+    else if (partecenum <=1  && partedezdois>1 && parteunidois <=1 ) {
+            alert(`${numero} = ${partecenum} centena, ${partedezdois} dezenas e ${parteunidois} unidade`)}    
+    
+   
+
+
+</script>

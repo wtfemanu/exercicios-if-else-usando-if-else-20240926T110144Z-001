@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+    const codigo = prompt("informe o codigo do produto");
+    const quantidade = prompt("Informe a quantidade do produto que foi comprado");
+    const codigoum = 125.48 * quantidade
+    const codigodois = 108.36 *quantidade
+    const codigotres = 99.99 * quantidade
+    const codigoquatro = 215.67 * quantidade
+
+
+
+
+    switch(codigo) {
+        case "1":
+             alert(`Descrição:"informatica para concursos" preço:${codigoum} `);
+        break;
+        case "2":
+             alert(`Descrisão:"Java como programador" preço :${codigodois} `);
+        break;
+        case "3":
+             alert(`Descrisão:"Logica da programação" preço:${codigotres}` );
+        break;
+        case "4":
+             alert("não lembro da descrição, preço:${codigoquatro}");
+        break
+    }
+
+
+
+</script>
